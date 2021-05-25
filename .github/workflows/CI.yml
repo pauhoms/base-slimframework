@@ -23,3 +23,7 @@ jobs:
     
     - name: 📔 Linter
       run: make lint
+
+    - name: 🧪 Test
+      run: |
+        make test

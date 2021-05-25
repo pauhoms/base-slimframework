@@ -21,7 +21,7 @@ class HealthCheck
         $this->entityManager->getConnection()->connect();
 
         $json = [
-            "mariadb-status" => $this->entityManager->getConnection()->isConnected()
+            "mariadb" => $this->entityManager->getConnection()->isConnected()
         ];
 
         $response->getBody()->write(json_encode($json));

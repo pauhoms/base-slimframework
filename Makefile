@@ -32,5 +32,7 @@ lint:
 auth-dev:
 	php -S localhost:8080 -t apps/public apps/public/authentication.php
 
+test:
+	./vendor/phpunit/phpunit/phpunit
 
 .PHONY: build
