@@ -10,16 +10,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: 🐳 Run containers
+      run: |
+        make build
+        make run
+
     - name: 📚 Validate composer.json and composer.lock
       run: composer validate --strict
 
     - name: 📖 Install dependencies
       run: composer install
-      
-    - name: 🐳 Run containers
-      run: |
-        make build
-        make run
     
     - name: 📔 Linter
       run: make lint
